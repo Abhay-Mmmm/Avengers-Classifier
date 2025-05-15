@@ -125,12 +125,6 @@ pip install flask flask-cors
 
 ---
 
-## Demo
-
-![Demo GIF](./GIF_Demo.gif)
-
----
-
 ## License
 
 MIT License (or specify your license here)
