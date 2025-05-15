@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENGERS CLASSIFIER</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">AVENGERS CLASSIFIER</a>
+    </nav>
+
+    <div class="container">
+        <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div class="card-wrapper" data-player="bruce_banner">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/bruce_banner.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">bruce</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="card-wrapper" data-player="clint_barton">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/clint_barton.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">clint</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>            
+            <div class="card-wrapper" data-player="natasha_romanoff">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/natasha_romanoff.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">natasha</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="card-wrapper" data-player="steve_rogers">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/steve_rogers.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">steve</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="card-wrapper" data-player="thor_odinson">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/thor_odinson.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">thor</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card-wrapper" data-player="tony_stark">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/tony_stark.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">tony</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or Click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-8 error" id="error" >
+                <p>Can't classify image. Classifier was not able to detect face and two eyes Properly</p>    
+            </div>
+
+            <div class="col-sm-4" id="classifiedPerson" style="text-align:center; margin-top: 2rem;"></div>
+            <div class="col-sm-4" id="divClassTable">
+                <table id="classTable">
+                        <tr>
+                            <th>Player</th>
+                            <th>Probability Score</th>
+                        </tr>
+                        <tr>
+                            <td>Bruce Banner</td>
+                            <td id="score_bruce_banner"></td>
+                        </tr>
+                        <tr>
+                            <td>Clint Barton</td>
+                            <td id="score_clint_barton"></td>
+                        </tr>
+                        <tr>
+                            <td>Natasha Romanoff</td>
+                            <td id="score_natasha_romanoff"></td>
+                        </tr>
+                        <tr>
+                            <td>Steve Rogers</td>
+                            <td id="score_steve_rogers"></td>
+                        </tr>
+                        <tr>
+                            <td>Thor Odinson</td>
+                            <td id="score_thor_odinson"></td>
+                        </tr>
+                        <tr>
+                            <td>Tony Stark</td>
+                            <td id="score_tony_stark"></td>
+                        </tr>
+                </table>
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./app.js"></script>
+</html>
