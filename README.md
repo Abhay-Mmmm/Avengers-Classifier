@@ -127,8 +127,7 @@ pip install flask flask-cors
 
 ## License
 
-MIT License (or specify your license here)
-
+MIT License 
 --- 
 
 Made with ❤️ by Abhay
