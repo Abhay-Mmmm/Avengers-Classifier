@@ -1,0 +1,4 @@
+PyWavelets
+opencv-python
+opencv-python-headless
+seaborn

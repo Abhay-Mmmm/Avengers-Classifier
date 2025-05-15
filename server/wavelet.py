@@ -22,4 +22,3 @@ def w2d(img, mode='haar', level=1):
     imArray_H = np.uint8(imArray_H)
 
     return imArray_H
-#This function is used to convert the image to haar wavelet transform
