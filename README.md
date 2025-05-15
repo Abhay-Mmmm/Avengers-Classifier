@@ -48,7 +48,7 @@ A web application that classifies images of Avengers characters using a machine 
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Abhay-Mmmm/Avengers-Classifier.git
 cd Abhay's AvengerClassifier
 ```
 
